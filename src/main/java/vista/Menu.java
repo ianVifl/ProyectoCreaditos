@@ -4,6 +4,8 @@
  */
 package vista;
 
+import com.mycompany.creditosuaem.controlador.ControladorSistema;
+
 /**
  *
  * @author ianvi
@@ -26,21 +28,67 @@ public class Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnSsistemaResgistro = new javax.swing.JButton();
+        btnReistroConsulta = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        btnSsistemaResgistro.setText("Registro");
+        btnSsistemaResgistro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSsistemaResgistroActionPerformed(evt);
+            }
+        });
+
+        btnReistroConsulta.setText("Consulta");
+        btnReistroConsulta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReistroConsultaActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel1.setText("Menu");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(42, 42, 42)
+                .addComponent(btnSsistemaResgistro)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 155, Short.MAX_VALUE)
+                .addComponent(btnReistroConsulta)
+                .addGap(53, 53, 53))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(144, 144, 144)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 141, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSsistemaResgistro)
+                    .addComponent(btnReistroConsulta))
+                .addGap(70, 70, 70))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnSsistemaResgistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSsistemaResgistroActionPerformed
+        ControladorSistema.iniciarRegistro();
+
+    }//GEN-LAST:event_btnSsistemaResgistroActionPerformed
+
+    private void btnReistroConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReistroConsultaActionPerformed
+      ControladorSistema.iniciarConsulta();                                                  
+    }//GEN-LAST:event_btnReistroConsultaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +126,16 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnReistroConsulta;
+    private javax.swing.JButton btnSsistemaResgistro;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
+
+    public javax.swing.JButton getBtnReistroConsulta() {
+        return btnReistroConsulta;
+    }
+
+    public javax.swing.JButton getBtnSsistemaResgistro() {
+        return btnSsistemaResgistro;
+    }
 }
